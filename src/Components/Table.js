@@ -1,11 +1,20 @@
 import React,{Component} from 'react';
-import './Table.css'
-import Card from './Card'
+import Card from './Card';
+import styled from 'styled-components';
+
+const MyTable = styled.div`
+    display: flex;
+    flex-wrap:wrap;
+    width: 700px;
+    height: 600px;
+    margin: 0 auto;
+    justify-content: space-around;
+`;
 
 export default class Table extends Component{
     render(){
         return(
-         <div className="table">
+         <MyTable>
              {
                  this.props.Deck.map((card, index) => {
                         const isBeenCompared = this.props.SelectedCouple.indexOf(card) > -1;
@@ -17,7 +26,7 @@ export default class Table extends Component{
                 wasGuessed={card.wasGuessed}
                      />;})
              }
-         </div>   
+         </MyTable>   
         )
     }
 }

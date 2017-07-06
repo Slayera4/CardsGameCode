@@ -1,19 +1,48 @@
 import React, {Component} from 'react';
-import './Header.css';
+import styled from 'styled-components';
+
+const Container = styled.div`
+    height: 50;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+`;
+const Title = styled.div`
+    font-size: 25px;
+    padding: 10px;
+    color: black;
+`;
+const ResetButton = styled.button`
+    position: absolute;
+    left: 12px;
+    top: 90px;
+`;
+const Animals2 = styled.div`
+    height: 100%;
+    width: 100%;
+    padding-bottom: 170px
+`;
+const Animals = styled.img`
+    width: 29%;
+    position: absolute;
+    margin-left: 28%;
+    margin-bottom: 100px;
+`;
 
 export default class Header extends Component {
     render() {
         return(
-            <header>
-                <div className="title">Memory Game</div>
-                <div><button className="reset-button" onClick={this.props.resetGame}>
+            <Container>
+                <Title>Memory Game</Title>
+                <ResetButton onClick={this.props.resetGame}>
                     Reset
-                    </button></div>
-                <div className="Animals2"><img className="Animals" src="http://i65.tinypic.com/2zq4n82.png" alt=""/></div>
-                <div className="title">
+                    </ResetButton>
+                <Animals2><Animals  src="http://i65.tinypic.com/2zq4n82.png" alt=""/></Animals2>
+                <Title>
                    Attempts:{this.props.numberAttempts}
-                </div>
-            </header>
+                </Title>
+            </Container>
         );
     }
 };

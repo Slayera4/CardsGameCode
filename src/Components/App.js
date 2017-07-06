@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import './App.css';
 import Header from './Header';
 import Table from './Table'
 import BuildDeck from '../utils/BuildDeck';
+import styled from 'styled-components';
+
 
 
 const getInitialState = () => {
@@ -15,6 +16,10 @@ const getInitialState = () => {
   };
 }
 
+const MyApp = styled.div`
+  background-color: white;
+`;
+
 class App extends Component {
   constructor(props){
     super(props);
@@ -23,7 +28,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <MyApp>
         <Header
         numberAttempts={this.state.numberAttempts}
         resetGame={() => this.resetGame()}
@@ -33,7 +38,7 @@ class App extends Component {
           SelectedCouple = {this.state.SelectedCouple}
           selectCard={(card) => this.selectCard(card)}
         />
-      </div>
+      </MyApp>
     );
   }
 
