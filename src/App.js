@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import Table from './Table'
-import BuildDeck from '../utils/BuildDeck';
+import Header from './Components/Header';
+import Table from './Components/Table'
+import BuildDeck from './utils/BuildDeck';
 import styled from 'styled-components';
 
+import injectStyle from './styles';
+
+injectStyle();
 
 
 const getInitialState = () => {

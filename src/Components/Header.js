@@ -12,6 +12,7 @@ const Title = styled.div`
     font-size: 25px;
     padding: 10px;
     color: black;
+    font: 150% sans-serif;
 `;
 const ResetButton = styled.button`
     position: absolute;

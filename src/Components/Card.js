@@ -6,10 +6,12 @@ const Cardimg = styled.img`
     width: 125px;
     height: 125px;
     border-radius: 15px;
+  }
 `;
 const CardHolder = styled.div`
     width: 125px;
     height: 125px;
+  }
 `;
 const Cover = styled.div`
     width: 125px;
@@ -17,6 +19,7 @@ const Cover = styled.div`
     background-image: url('http://i68.tinypic.com/2itndhl.png');
     border-radius: 15px;
     border: 2px solid;
+  }
 `;
 const Content = styled.div`
     width: 125px;
@@ -26,6 +29,7 @@ const Content = styled.div`
     align-items: center;
     border: 1px solid;
     border-radius: 15px;
+  }
 `;
 export default class Card extends Component {
     render() {

@@ -9,6 +9,7 @@ const MyTable = styled.div`
     height: 600px;
     margin: 0 auto;
     justify-content: space-around;
+
 `;
 
 export default class Table extends Component{
