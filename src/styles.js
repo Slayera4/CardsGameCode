@@ -2,7 +2,8 @@ import { injectGlobal } from 'styled-components';
 
 
 export default function inject() {
-  injectGlobal`
+// eslint-disable-next-line
+ injectGlobal`
     
     html, body {
       width: 100%;
