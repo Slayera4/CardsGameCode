@@ -29,13 +29,6 @@ class Game1 extends Component {
   }
 
   selectCard(card) {
-    if (
-      this.props.Game1.isComparing ||
-      this.props.Game1.selectedCouple.indexOf(card) > -1 ||
-      card.wasGuessed
-    ) {
-      return;
-    }
 
     const selectedCouple = [...this.props.Game1.selectedCouple, card];
     this.props.dispatch({type: 'SELECTED', couple: selectedCouple})
@@ -59,25 +52,24 @@ class Game1 extends Component {
                  return card
                     
             }
-                   this.CheckWinner(deck);
+            return card.wasGuessed = true
 
-           return card.wasGuessed = true
 
 
           });
         }
-      this.props.dispatch({type: 'INC_ATTEMPTS'})
+        this.props.dispatch({type: 'INC_ATTEMPTS'})
+        this.CheckWinner(deck)
 
-
-      }, 1000)
-     
+    }, 1000)
     }
 
     CheckWinner(deck){
       
-        if (deck.filter((card) => !card.wasGuessed).length === 1){
+        if (deck.filter((card) => !card.wasGuessed).length === 2){
            alert(`You won in ${this.props.Game1.numberAttempts} attempts`);
-           this.props.dispatch({type:"RESET"})}
+           this.props.dispatch({type:"RESET1"})
+          this.props.dispatch({type:"RESET2"})}
     }
 
     resetGame(){
