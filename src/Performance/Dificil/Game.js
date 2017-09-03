@@ -75,11 +75,10 @@ class Game2 extends Component {
 
     CheckWinner(deck){
       
-        if (
-            deck.filter((card) => !card.wasGuessed).length === 1
-            
-        ){ return alert(`You won in ${this.props.Game2.numberAttempts} attempts`);
-            }
+        if (deck.filter((card) => !card.wasGuessed).length === 1) {
+          alert(`You won in ${this.props.Game2.numberAttempts} attempts`);
+          this.props.dispatch({type:"RESET"})
+        }
     }
 
     resetGame(){

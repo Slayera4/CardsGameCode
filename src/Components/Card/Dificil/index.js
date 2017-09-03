@@ -7,6 +7,8 @@ import Cover from './Cover';
 import Content from './Content';
 
 export default class Card extends Component {
+    
+    
     render() {
         return (
             <CardHolder onClick={this.props.selectCard}>

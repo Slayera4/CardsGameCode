@@ -1,4 +1,3 @@
-import {combineReducers} from 'redux';
 import gameReducer1 from './gameReducer1'
 import gameReducer2 from './gameReducer2'
 import gameReducer3 from './gameReducer3'

@@ -1,8 +1,8 @@
-import BuildDeck from '../utils/index3'
+import BuildDeck from '../utils/index'
 const initialState = {
     numberAttempts:0,
     hits: 0,
-    deck:BuildDeck(),
+    deck:BuildDeck(20),
     selectedCouple: [],
     isComparing: false,
 
@@ -31,7 +31,7 @@ export default function (state = initialState, action = {}){
          return {
                  numberAttempts:0,
                  hits: 0,
-                 deck: BuildDeck(),
+                 deck: BuildDeck(20),
                  selectedCouple: [],
                  isComparing: false,
          }
