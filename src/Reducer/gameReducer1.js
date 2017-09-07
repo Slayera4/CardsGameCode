@@ -1,13 +1,15 @@
 import BuildDeck from '../utils/index'
+let N = 4;
 const initialState = {
     numberAttempts:0,
     hits: 0,
-    deck:BuildDeck(4),
+    deck:BuildDeck(N),
     selectedCouple: [],
     isComparing: false,
 
     
 }
+
 
 export default function (state = initialState, action = {}){
     
@@ -15,7 +17,16 @@ export default function (state = initialState, action = {}){
     
     switch(action.type){
 
+        case "EASY" :
+        return {...state}
 
+        case "HARD":
+        return {...state,
+                deck: BuildDeck(N=16)}
+
+        case "SUPERHARD":
+        return {...state,
+                deck: BuildDeck(N=20)}
         case"SELECTED" : 
         return{
             ...state,
@@ -29,7 +40,7 @@ export default function (state = initialState, action = {}){
         case "RESET":
 
          return {
-                 deck: BuildDeck(4),
+                 deck: BuildDeck(N),
                  selectedCouple: [],
                  isComparing: false,
                  numberAttempts:0,
@@ -38,7 +49,7 @@ export default function (state = initialState, action = {}){
          case "RESET1":
          return{
             ...state,
-            deck: BuildDeck(4),
+            deck: BuildDeck(N),
             selectedCouple: [],
             isComparing: false,
             

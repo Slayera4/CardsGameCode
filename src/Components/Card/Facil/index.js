@@ -8,7 +8,6 @@ import Cover from './Cover';
 import Content from './Content';
  class Card extends Component {
     render() {
-        console.log(this.props.Number_of_Cards)
         return (
             <CardHolder onClick={this.props.selectCard}>
                 <FlipCard
